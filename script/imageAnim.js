@@ -41,20 +41,30 @@
 
 		zone.addEventListener("drop", function(e) {
 			e.preventDefault();
-			console.log("you dropped sumpin on me.");
+			console.log("you dropped sumpin on me."); 
 
 			let piece = e.dataTransfer.getData("text/plain");
-			e.target.appendChild(document.querySelector(`#${piece}`));
+			e.target.appendChild(document.querySelector(`#${piece}`));		
 		});
+
 	});
 
 	function resetPuzzlePieces(){
 		// debugger;
 		piecesBoard.innerHTML = "";
 		createPuzzlepieces(this.dataset.puzzleref)
+		dropZones.forEach(zone => {
+			zone.innerHTML = "";
+		});
+
 	}
 
 	puzzleSelectors.forEach(puzzle => puzzle.addEventListener("click", resetPuzzlePieces));
 
 	createPuzzlepieces(0);
+
+	// function resetDropZones(){
+
+	// }
+
 })();
