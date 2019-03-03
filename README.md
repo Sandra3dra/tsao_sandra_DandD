@@ -1,6 +1,6 @@
 # Puzzle Game(drag and drop)!
 
-A drag and drop puzzle game that we started in class to build the base of the puzzle board and drop zones. We were required to work on it as homework to figure out how to fix the bugs that are happending when we drag and drop the puzzle peices. The first bug is that the puzzles can be dropped into the same zone which should not happen because that breaks things. The second bug is that when we reset the puzzle peices to new puzzles, the old ones stays on the drop zones, that is also not right. The final of this project should be a new version which both bugs are fixed.
+A drag and drop puzzle game that we started in class to build the base of the puzzle board and drop zones. We were required to work on it as homework to figure out how to fix the bugs that are happending when we drag and drop the puzzle pieces. The first bug is that the puzzles can be dropped into the same zone which should not happen because that breaks things. The second bug is that when we reset the puzzle pieces to new puzzles, the old ones stays on the drop zones, that is also not right. The final of this project should be a new version which both bugs are fixed.
 
 ## Installation
 Please go to this [GitHub](https://github.com/SandraTsao/tsao_sandra_DandD) and download the folder to your computer. Inside the folder there would be " imageAnim.html " for you to go to the webpages.
