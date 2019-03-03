@@ -41,20 +41,36 @@
 
 		zone.addEventListener("drop", function(e) {
 			e.preventDefault();
-			console.log("you dropped sumpin on me.");
+			console.log("you dropped sumpin on me."); 
 
-			let piece = e.dataTransfer.getData("text/plain");
-			e.target.appendChild(document.querySelector(`#${piece}`));
+			let piece = e.dataTransfer.getData("text/plain");	
+			if (zone.innerHTML == 0) {
+				e.target.appendChild(document.querySelector(`#${piece}`));;
+			} else {
+				console.log("Don't do that!");
+				return false;
+			}
+
 		});
 	});
 
 	function resetPuzzlePieces(){
 		// debugger;
 		piecesBoard.innerHTML = "";
-		createPuzzlepieces(this.dataset.puzzleref)
+		createPuzzlepieces(this.dataset.puzzleref);
+		dropZones.forEach(zone => {
+			zone.innerHTML = "";
+			console.log("Bye!");
+		});
+
 	}
 
 	puzzleSelectors.forEach(puzzle => puzzle.addEventListener("click", resetPuzzlePieces));
 
 	createPuzzlepieces(0);
+
+	// function resetDropZones(){
+
+	// }
+
 })();
